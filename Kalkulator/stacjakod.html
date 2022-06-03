@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stacja Paliw</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styling.css">
 </head>
 
 <body>
@@ -21,10 +21,10 @@
                 </div>
                 <h4>Oblicz cenę paliwa!</h4>
 
-                <label for="litraz">Ile litrów?: </label><br>
+                <label for="litry">Ile litrów?: </label><br>
                 <input type="numer" id="litry"><br>
                 <br>
-                <button onclick="policz()">Oblicz</button>
+                <button onclick="oblicz()">Oblicz</button>
                 <span id="cenapaliwa"></span>
             </main>
         </div>
@@ -36,12 +36,12 @@
                var cena = 0
                 
                 if (document.getElementById("Benzyna").checked) {
-                    var cena = litraz * 6.70;
+                    var cena = litry * 6.70;
                     cena = parseFloat(cena);
                     document.getElementById("cenapaliwa").innerHTML = cena;
                 }
                 if (document.getElementById("Diesel").checked) {
-                    var cena = litraz * 7.50;
+                    var cena = litry * 7.50;
                     cena = parseFloat(cena);
                     document.getElementById("cenapaliwa").innerHTML = cena;
                 }
