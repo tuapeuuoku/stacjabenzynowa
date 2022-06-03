@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja Paliw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="kolor">
+        <div class="calosc">
+            <h1>Stacja</h1>
+            <main>
+                <h3>Wybierz paliwo!</h3>
+                <div class="przyciski">
+                    <label><input type="radio" name="paliwo" id="Benzyna"> Benzyna </label>
+                    <label><input type="radio" name="paliwo" id="Diesel"> Diesel </label>
+                </div>
+                <h4>Oblicz cenę paliwa!</h4>
+
+                <label for="litraz">Ile litrów?: </label><br>
+                <input type="numer" id="litry"><br>
+                <br>
+                <button onclick="policz()">Oblicz</button>
+                <span id="cenapaliwa"></span>
+            </main>
+        </div>
+
+        <script>
+            function oblicz() {
+               var ilosc = document.getElementById("litry").value;
+               litry = parseFloat(ilosc);
+               var cena = 0
+                
+                if (document.getElementById("Benzyna").checked) {
+                    var cena = litraz * 6.70;
+                    cena = parseFloat(cena);
+                    document.getElementById("cenapaliwa").innerHTML = cena;
+                }
+                if (document.getElementById("Diesel").checked) {
+                    var cena = litraz * 7.50;
+                    cena = parseFloat(cena);
+                    document.getElementById("cenapaliwa").innerHTML = cena;
+                }
+
+
+                document.getElementById('cenapaliwa').innerHTML = "Koszt paliwa &#8594;" + koszt + "zł";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
